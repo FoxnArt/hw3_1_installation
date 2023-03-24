@@ -38,7 +38,7 @@ public class Main {
     }
 
     public static String createMyDir(String dirPath) {
-        File dirName = new File(dirPath);
+        File dirName = new File(dirPath); // все каталоги цепляю на один объект, как передавать File dir1, File dir2... не нашел
         if (dirName.mkdir()) {
             return (new Date() + " : " + dirPath + " : folder created successfully\n");
         } else {
